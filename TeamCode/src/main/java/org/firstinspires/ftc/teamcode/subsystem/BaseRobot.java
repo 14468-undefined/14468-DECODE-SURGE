@@ -18,14 +18,19 @@ public class BaseRobot extends UndefinedSubsystemBase {
     //public ExampleSubsytem example;
     public AutoUtil autoGenerator;
     public DriveSubsystem drive;
+    public IntakeSubsystem intake;
+    public SorterSubsystem sorter;
     public ColorfulTelemetry cTelemetry;
     public Telemetry telemetry;
+
+
 
 
     public BaseRobot(HardwareMap hwMap, Pose2d startPos){
         drive = new DriveSubsystem(hwMap, startPos);
         autoGenerator = new AutoUtil(drive);
-
+        sorter = new SorterSubsystem(hwMap, cTelemetry);
+        intake = new IntakeSubsystem(hwMap, cTelemetry);
         //add the rest of subsystems here
 
 
@@ -46,6 +51,8 @@ public class BaseRobot extends UndefinedSubsystemBase {
     @Override
     public void periodic() {
         drive.periodic();
+        sorter.periodic();
+        intake.periodic();
         //rest of subsystems here
 
     }

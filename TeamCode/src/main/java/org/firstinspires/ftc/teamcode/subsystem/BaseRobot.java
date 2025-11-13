@@ -19,6 +19,8 @@ public class BaseRobot extends UndefinedSubsystemBase {
     public AutoUtil autoGenerator;
     public DriveSubsystem drive;
     public IntakeSubsystem intake;
+    public TransferSubsystem transfer;
+    public LEDSubsystem LED;
     public SorterSubsystem sorter;
     public ColorfulTelemetry cTelemetry;
     public Telemetry telemetry;
@@ -31,6 +33,8 @@ public class BaseRobot extends UndefinedSubsystemBase {
         autoGenerator = new AutoUtil(drive);
         sorter = new SorterSubsystem(hwMap, cTelemetry);
         intake = new IntakeSubsystem(hwMap, cTelemetry);
+        LED = new LEDSubsystem(hwMap, cTelemetry);
+        transfer = new TransferSubsystem(hwMap, cTelemetry);
         //add the rest of subsystems here
 
 
@@ -53,6 +57,7 @@ public class BaseRobot extends UndefinedSubsystemBase {
         drive.periodic();
         sorter.periodic();
         intake.periodic();
+
         //rest of subsystems here
 
     }

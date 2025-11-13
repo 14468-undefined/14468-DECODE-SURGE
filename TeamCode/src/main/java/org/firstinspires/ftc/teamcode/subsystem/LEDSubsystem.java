@@ -34,9 +34,9 @@ public class LEDSubsystem extends SubsystemBase {
 
 
 
-        LEDLeft = hardwareMap.get(Servo.class, "hood");
-        LEDCenter = hardwareMap.get(Servo.class, "hood");
-        LEDRight = hardwareMap.get(Servo.class, "hood");
+        LEDLeft = hardwareMap.get(Servo.class, "LEDLeft");
+        LEDCenter = hardwareMap.get(Servo.class, "LEDCenter");
+        LEDRight = hardwareMap.get(Servo.class, "LEDRight");
 
 
 

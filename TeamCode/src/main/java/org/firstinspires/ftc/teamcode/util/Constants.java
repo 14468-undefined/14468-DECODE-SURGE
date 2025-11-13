@@ -27,11 +27,12 @@ public final class Constants{
 
     @Config
     public static final class transferConstants{
-        public static double SPIN_REVERSE_POWER = -1;
-        public static double SPIN_POWER = 1;
-        public static int CLOSE_TRANSFER_TIME = 500; //in milliseconds
-        public static int MID_TRANSFER_TIME = 500; //in milliseconds
-        public static int FAR_TRANSFER_TIME = 500; //in milliseconds
+        public static double GATE_LEFT_OPEN = 0;
+        public static double GATE_LEFT_CLOSED = 0;
+        public static double GATE_CENTER_OPEN = 0;
+        public static double GATE_CENTER_CLOSED = 0;
+        public static double GATE_RIGHT_CLOSED = 0;
+        public static double GATE_RIGHT_OPEN = 0;
     }
     @Config
 
